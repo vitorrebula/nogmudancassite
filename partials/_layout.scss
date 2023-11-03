@@ -1,0 +1,380 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+// CARROSSEL
+.caixa-slider{
+    display: flex;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.caixa-images{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 570px;
+}
+.slider{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+}
+.on{
+    opacity: 1;
+}
+#prev-button, #next-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+#prev-button img, #next-button img{
+    width: 100%;
+    height: 100%;
+}
+#prev-button{
+    transform: rotate(180deg);
+}
+@media screen and (max-width:960px){
+    .caixa-slider{
+    display: none;
+    }
+}
+
+
+
+
+
+
+
+//-----------------------------
+//BOTAO FIXO DE AGENDAR MUDANÇA INICIO
+.fixed-button{
+    border: 1px solid $branco;
+    padding: 8px 24px;
+    border-radius: 4px;
+    user-select: none;
+    opacity: 0.6;
+    color: $branco;
+    background-color: transparent;
+    transition: background-color 0.8s;
+    margin-right: 8px;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+}
+.fixed-button:hover{
+    border: 1px solid $verde-medio;
+    background-color: $verde-medio;
+    opacity: 1.0;
+}
+@media screen and (max-width:768px){
+    .fixed-button{
+        display: none;
+    }
+
+}
+//---------------------------------------------
+
+//------------------HERO----------------------
+.hero{
+    color:$branco;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding: 14px;
+    margin-top: 100px;
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 900px;    
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button-contact{
+    border: 1px solid $branco;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $branco;
+    background-color: transparent;
+    transition: background-color 0.8s;
+    user-select: none;
+    margin-right: 8px;
+}
+.button-contact:hover{
+    border: 1px solid $verde-medio;
+    background-color: $branco;
+    color: $fundo-escuro;
+    animation: scalebutton 0.8s alternate infinite;
+}
+@keyframes scalebutton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}   
+
+@media screen and (max-width:768px){
+    .hero{
+        min-height: 60vh;
+        padding: 0 14px;
+        width: 100%;
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 15px;
+        }
+        
+    }
+}
+//----------------------------------------------------
+
+//----------------------ABOUT-----------------------------------
+.about{
+    overflow: hidden;
+    color: $branco;
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 150px;
+    padding: 34px 14px 64px 14px;
+
+}
+
+.about-content div{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+        color: $verde-medio;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .about-content{
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+//------------------------------------------------------
+//MISSAO, VISÃO, VALORES
+.missaovisaovalores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 244px;
+    gap: 150px;
+    padding: 0 20px;
+    h3{
+        font-size: 28px;
+        margin-bottom: 14px;
+        color: $verde-medio;
+    }
+}
+.missaovisaovalores div{
+    flex: 1;
+}
+@media screen and (max-width:768px){
+    .missaovisaovalores{
+        flex-direction: column;
+    }
+}
+//-----------------------------------------------
+//MERCADO DE MUDANÇAS + PROPOSTA DA NOG
+.mercadodemudancaseanog{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 254px;
+    color: $branco_puro;
+    padding: 0 20px;
+    overflow: hidden;
+    h2{
+        font-size: 38px;
+        margin-bottom: 14px;
+        color: $verde-medio;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+.mercadodemudancas{
+    width: 100%;
+    margin-bottom: 104px;
+}
+.propostadanog{
+    width: 100%;
+}
+
+@media screen and (max-width:768px){
+    .mercadodemudancaseanog{
+        padding: 0 20px;
+    }
+}
+//-------------------------------------------------
+// TUDO SOBRE A EQUIPE NOG
+.tudosobreequipe{
+    overflow: hidden;
+    color: $branco;
+    padding: 0 20px;
+}
+.umaequipenog{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+    overflow: hidden;
+    h2{
+        font-size: 38px;
+        margin-bottom: 14px;
+        color: $verde-medio;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+//LIDER-----------------------------------------
+.liderdeequipe{
+    margin-bottom: 40px;
+    h3{
+        font-size: 28px;
+        margin-bottom: 14px;
+        color: $verde-medio;
+    }
+    p{
+        margin-bottom: 24px;
+        line-height: 150%;
+    }
+}
+.bandeiraslider{
+    display:flex;
+    gap: 25px;
+    p{
+        font-size: 0.8rem;
+    }
+}
+.bandeiraslider div{
+    flex: 1;
+}
+@media screen and (max-width:768px){
+    .bandeiraslider{
+        flex-direction: column;
+    }
+}
+//----------------------------------------------
+
+//EMBALADOR-------------------------------------
+.montador{
+    margin-bottom: 40px;
+    h3{
+        font-size: 28px;
+        margin-bottom: 14px;
+        color: $verde-medio;
+    }
+    p{
+        margin-bottom: 24px;
+        line-height: 150%;
+    }
+}
+.bandeirasmontador{
+    display: flex;
+    gap: 25px;
+    p{
+        font-size: 0.8rem;
+    }
+}
+.bandeirasmontador div{
+    flex: 1;
+}
+
+@media screen and (max-width:768px){
+    .bandeirasmontador{
+        flex-direction: column;
+    }
+}
+//----------------------------------------------
+
+//CARREGADOR
+.carregador{
+    margin-bottom: 100px;
+    h3{
+        font-size: 28px;
+        margin-bottom: 14px;
+        color: $verde-medio;
+    }
+    p{
+        margin-bottom: 24px;
+        line-height: 150%;
+    }
+}
+.bandeirascarregador{
+    display: flex;
+    gap: 25px;
+    p{
+        font-size: 0.8rem;
+    }
+}
+.bandeirascarregador div{
+    flex: 1;
+}
+
+@media screen and (max-width:768px){
+    .bandeirascarregador{
+        flex-direction: column;
+    }
+}
+//-----------------------------------------
+
+//footer
+footer{
+    width: 100%;
+}
+.footer{
+    color: $branco;
+}
+.logotipo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.a{
+    display: flex;
+    opacity: 0.0;
+}
+.b{
+    display: flex;
+    opacity: 0.0;
+}
+.mail{
+    margin: 5px;
+    p{
+        text-align: center;
+    }
+}
